@@ -129,11 +129,11 @@ pipeline {
      }
   }
      
-       stage('Test Production') {
-         agent any
-         steps {
-           script {
-             sh '''
+    stage('Test Production') {
+        agent any
+        steps {
+            script {
+              sh '''
                curl http://${PROD_APP_ENDPOINT}:${EXTERNAL_PORT} | grep -q "Dimension Abdoulaye"
                 '''
               }
