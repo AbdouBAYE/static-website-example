@@ -46,7 +46,7 @@ pipeline {
            steps {
               script {
                 sh '''
-                    curl http://172.17.0.1:${EXTERNAL_PORT} | grep -q "Hello world!"
+                    curl http://172.17.0.1:${EXTERNAL_PORT} | grep -q "Dimension Abdoulaye"
                 '''
               }
            }
@@ -102,7 +102,16 @@ pipeline {
         }
      }
 
-
+      stage('Test Staging') {
+        agent any
+        steps {
+          script {
+             sh '''
+              curl http://${STG_APP_ENDPOINT}:${EXTERNAL_PORT} | grep -q "Dimension Abdoulaye"
+              '''
+              }
+           }
+      }
 
      stage('PRODUCTION - Deploy app') {
        when {
@@ -119,6 +128,17 @@ pipeline {
         }
      }
   }
+     
+       stage('Test Production') {
+         agent any
+         steps {
+           script {
+             sh '''
+               curl http://${PROD_APP_ENDPOINT}:${EXTERNAL_PORT} | grep -q "Dimension Abdoulaye"
+                '''
+              }
+           }
+      }   
      
   post {
        always {
