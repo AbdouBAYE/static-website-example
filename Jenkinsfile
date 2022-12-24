@@ -101,21 +101,10 @@ pipeline {
           }
         }
      }
-
-      stage('Test Staging') {
-        agent any
-        steps {
-          script {
-             sh '''
-              curl http://${STG_APP_ENDPOINT}:${EXTERNAL_PORT} | grep -q "Dimension Abdoulaye"
-              '''
-              }
-           }
-      }
-
+          
      stage('PRODUCTION - Deploy app') {
        when {
-              expression { GIT_BRANCH == 'origin/master' }
+              expression { GIT_BRANCH == 'master' }
             }
       agent any
 
@@ -127,18 +116,7 @@ pipeline {
           }
         }
      }
-       
-    stage('Test Production') {
-        agent any
-        steps {
-            script {
-              sh '''
-               curl http://${PROD_APP_ENDPOINT}:${EXTERNAL_PORT} | grep -q "Dimension Abdoulaye"
-                '''
-              }
-           }
-       }
-     }       
+    }       
      
   post {
        always {
