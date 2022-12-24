@@ -1,7 +1,7 @@
 Static Website Example
 ----------------------
 
-More info [here](https://html5up.net/license).
+[![Build Status](http://192.168.56.106:8080/buildStatus/icon?job=static-website)](http://192.168.56.106:8080/job/static-website/)
 
 Pipeline Staging
 ![image](https://user-images.githubusercontent.com/117050560/209450880-17423f7e-dfcf-45e4-9b10-69740f29da94.png)
