@@ -137,7 +137,8 @@ pipeline {
                 '''
               }
            }
-      }   
+       }
+     }       
      
   post {
        always {
@@ -147,4 +148,3 @@ pipeline {
     }
    }
   }
-}
