@@ -69,7 +69,7 @@ pipeline {
           steps {
              script {
                sh '''
-                 docker save  ${ID_DOCKER}/$IMAGE_NAME:$IMAGE_TAG > /tmp/alpinehelloworld.tar                 
+                 docker save  ${ID_DOCKER}/$IMAGE_NAME:$IMAGE_TAG > /tmp/static-website.tar                 
                '''
              }
           }
@@ -104,7 +104,7 @@ pipeline {
           
      stage('PRODUCTION - Deploy app') {
        when {
-              expression { GIT_BRANCH == 'master' }
+              expression { GIT_BRANCH == 'origin/master' }
             }
       agent any
 
