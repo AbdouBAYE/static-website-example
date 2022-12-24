@@ -11,6 +11,10 @@ Acces application Staging
 
 ![image](https://user-images.githubusercontent.com/117050560/209450932-2767b478-4a69-4e43-8367-a51a39402ccf.png)
 
+Notifications Slack
+![image](https://user-images.githubusercontent.com/117050560/209451135-36708ef3-e331-421e-9a19-ca2040d4abfa.png)
+
+
 pipeline PROD
 ![image](https://user-images.githubusercontent.com/117050560/209451022-6a580e4e-a945-4efc-8969-9aa337ac2ba4.png)
 
@@ -19,4 +23,6 @@ Acces application Production
 
 ![image](https://user-images.githubusercontent.com/117050560/209451050-ecc94e8a-0380-4782-ade1-5bd13f2eaa81.png)
 
+Notifications Slack
+![image](https://user-images.githubusercontent.com/117050560/209451149-be03925a-2c49-41af-b21d-97383b2ea4b2.png)
 
