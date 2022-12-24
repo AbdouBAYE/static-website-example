@@ -31,7 +31,7 @@ Acces application Staging
 pipeline PROD
 ![image](https://user-images.githubusercontent.com/117050560/209451022-6a580e4e-a945-4efc-8969-9aa337ac2ba4.png)
 
-Acces application Staging
+Acces application Production
 ![image](https://user-images.githubusercontent.com/117050560/209451042-19fa2337-a115-46ff-a529-255082c6a89d.png)
 
 ![image](https://user-images.githubusercontent.com/117050560/209451050-ecc94e8a-0380-4782-ade1-5bd13f2eaa81.png)
