@@ -119,6 +119,17 @@ pipeline {
           }
         }
      }
+       stage('Test PRODUCTION') {
+           agent any
+           steps {
+              script {
+                sh '''
+                    httpRequest ignoreSslErrors: true, responseHandle: 'NONE', url: 'http://${PROD_API_ENDPOINT}:${EXTERNAL_PORT}', validResponseCodes: '200', wrapAsMultipart: false
+                    curl http://${PROD_APP_ENDPOINT}:${EXTERNAL_PORT} | grep -q "Dimension Abdoulaye"
+                '''
+              }
+           }
+      }          
     }       
      
   post {
