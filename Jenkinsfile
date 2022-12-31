@@ -123,7 +123,7 @@ pipeline {
            agent any
            steps {
               script {
-                httpRequest ignoreSslErrors: true, responseHandle: 'NONE', url: 'http://${PROD_API_ENDPOINT}:${EXTERNAL_PORT}', validResponseCodes: '200', wrapAsMultipart: false   
+                httpRequest ignoreSslErrors: true, responseHandle: 'NONE', url: 'http://${PROD_API_ENDPOINT}', validResponseCodes: '200', wrapAsMultipart: false   
                 sh '''
                     curl http://${PROD_APP_ENDPOINT} | grep -q "Dimension Abdoulaye"
                 '''
