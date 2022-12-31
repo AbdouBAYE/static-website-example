@@ -133,7 +133,7 @@ pipeline {
        stage('Test PRODUCTION') {
            agent any
            steps {
-              httpRequest ignoreSslErrors: true, responseHandle: 'NONE', url: 'http://${PROD_APP_ENDPOINT}', validResponseCodes: '200', wrapAsMultipart: fals  
+              httpRequest ignoreSslErrors: true, responseHandle: 'NONE', url: 'http://${PROD_APP_ENDPOINT}', validResponseCodes: '200', wrapAsMultipart: false 
               script {
                 sh '''
                     curl http://${PROD_APP_ENDPOINT} | grep -q "Dimension Abdoulaye"
