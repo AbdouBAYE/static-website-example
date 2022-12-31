@@ -105,6 +105,17 @@ pipeline {
         }
      }
           
+       stage('Test STAGING') {
+           agent any
+           steps {
+              script {
+                sh '''
+                    curl http://${STG_APP_ENDPOINT} | grep -q "Dimension Abdoulaye"
+                '''
+              }
+           }
+      }           
+          
      stage('PRODUCTION - Deploy app') {
        when {
               expression { GIT_BRANCH == 'origin/master' }
